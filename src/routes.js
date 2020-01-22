@@ -7,6 +7,4 @@ const ClientController = require("./controllers/ClientController");
 routes.get("/clients", ClientController.index);
 routes.post("/clients", ClientController.store);
 
-console.log("teste");
-
 module.exports = routes;

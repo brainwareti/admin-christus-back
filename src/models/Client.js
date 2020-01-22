@@ -5,15 +5,24 @@ const ClientSchema = new mongoose.Schema({
   cpf: String,
   rg: String,
   birthDate: {
-    type: Date,
-    default: Date.now()
+    type: String
   },
   address: String,
-  numberAddress: Number,
+  numberStreet: Number,
   district: String,
   cep: String,
-  phone: [String],
-  occupation: String
+  phone1: String,
+  phone2: String,
+  plan: String,
+  occupation: String,
+  dependents: [
+    {
+      name: String,
+      cpf: String,
+      relationship: String
+    }
+  ],
+  socialMedia: [String]
 });
 
 module.exports = mongoose.model("Client", ClientSchema);
